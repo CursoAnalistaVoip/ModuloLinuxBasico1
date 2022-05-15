@@ -1,2 +1,2 @@
-comandos basciso para quem esta iniciando no linux 
+comandos basiso para quem esta iniciando no linux 
 # ModuloLinuxBasico1
