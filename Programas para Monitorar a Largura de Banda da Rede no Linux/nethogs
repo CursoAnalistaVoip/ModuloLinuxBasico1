@@ -1,0 +1,10 @@
+NetHogs é um programa de linha de comando de código aberto usado para monitorar a largura de banda de tráfego de rede em tempo real usada por cada processo
+ou aplicativo no Linux.
+
+Para monitorar dispositivo específico (eth0) somente largura de banda da rede, use o comando como.
+
+# nethogs eth0
+
+Para monitorar a largura de banda da rede de ambos eth0 e eth1 interfaces, digite o seguinte comando.
+
+# nethogs eth0 eth1
