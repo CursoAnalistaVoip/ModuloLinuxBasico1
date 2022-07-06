@@ -1,0 +1,32 @@
+traceroute
+
+Mostra o caminho percorrido por um pacote para chegar ao seu destino. 
+Este comando mostra na tela o caminho percorrido entre os Gateways da rede e o tempo gasto de retransmissão. 
+Este comando é útil para encontrar gateways defeituosos na rede caso o pacote não esteja chegando ao seu destino.
+
+traceroute [opções] [host/IP de destino]
+
+opções:
+-l
+Mostra o tempo de vida do pacote (ttl)
+
+-m [num]
+Ajusta a quantidade máximas de ttl dos pacotes. O padrão é 30.
+
+-n
+Mostra os endereços numericamente ao invés de usar resolução DNS.
+
+-p [porta]
+Ajusta a porta que será usada para o teste. A porta padrão é 33434.
+
+-r
+Pula as tabelas de roteamento e envia o pacote diretamente ao computador conectado a rede.
+
+-s [end]
+Usa o endereço IP/DNS [end] como endereço de origem para computadores com múltiplos endereços IPs ou nomes.
+
+-v
+Mostra mais detalhes sobre o resultado do traceroute.
+
+-w [num]
+Configura o tempo máximo que aguardará por uma resposta. O padrão é 3 segundos.
