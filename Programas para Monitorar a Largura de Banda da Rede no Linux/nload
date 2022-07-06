@@ -1,0 +1,11 @@
+NLOAD
+
+
+O nload é um aplicativo de console que monitora o tráfego de rede e o uso da largura de banda em tempo real.
+
+Ele visualiza o tráfego de entrada e saída usando dois gráficos e fornece informações adicionais como
+a quantidade total de dados transferidos e uso mínimo/máximo da rede.
+
+
+Para exibir vários dispositivos por vez; não mostre os gráficos de tráfego, use o -m como opção.
+
