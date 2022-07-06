@@ -1,0 +1,20 @@
+IFTOP
+
+Monitora em tempo real a utilização da rede por conexão com o iftop
+
+
+Opções e uso do Iftop
+Enquanto executa o iftop, você pode usar as teclas S , D para ver mais informações como origem, destino, etc.
+
+
+
+OPÇÕES
+       -h Imprime um resumo de uso.
+
+       -n Não faz pesquisas de nome de host.
+
+       -N Não resolve o número da porta para nomes de serviço
+    
+       -P Ativa a exibição da porta.
+
+       -b Não exibe gráficos de barras de tráfego.
