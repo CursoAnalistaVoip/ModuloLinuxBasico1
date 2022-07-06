@@ -1,0 +1,30 @@
+Com o ping, você tem acesso ao tempo de envio e recebimento de resposta de uma rede.
+Ele funciona enviando uma série de mensagens ICMP (Internet Control Message Protocol)
+ao host de destino e aguarda por uma resposta echo do host ou dispositivo. 
+Assim, somos informados sobre o funcionamento da rede.
+
+Neste exemplo, iremos verificar a conectividade do www.google.com:
+
+ping google.com
+
+PING google.com (172.217.13.174) 56(84) bytes of data.
+64 bytes from yul03s04-in-f14.1e100.net (172.217.13.174): icmp_seq=1 ttl=113 time=1.25 ms
+64 bytes from yul03s04-in-f14.1e100.net (172.217.13.174): icmp_seq=2 ttl=113 time=1.28 ms
+64 bytes from yul03s04-in-f14.1e100.net (172.217.13.174): icmp_seq=3 ttl=113 time=1.26 ms
+64 bytes from yul03s04-in-f14.1e100.net (172.217.13.174): icmp_seq=4 ttl=113 time=1.28 ms
+64 bytes from yul03s04-in-f14.1e100.net (172.217.13.174): icmp_seq=5 ttl=113 time=1.30 ms
+64 bytes from yul03s04-in-f14.1e100.net (172.217.13.174): icmp_seq=6 ttl=113 time=1.30 ms
+64 bytes from yul03s04-in-f14.1e100.net (172.217.13.174): icmp_seq=7 ttl=113 time=1.29 ms
+
+--- google.com ping statistics ---
+16 packets transmitted, 16 received, 0% packet loss, time 15020ms
+rtt min/avg/max/mdev = 1.257/1.286/1.338/0.032 ms
+
+
+
+min – refere-se ao tempo mínimo para receber uma resposta.
+avg – mostra o tempo médio para receber respostas.
+max – reflete o tempo máximo para obter uma resposta.
+
+
+
