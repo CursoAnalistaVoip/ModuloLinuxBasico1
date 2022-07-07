@@ -1,0 +1,22 @@
+ethtool
+
+ETHTOOL - FERRAMENTA DE MANIPULAÇÃO E CONSULTA DE INTERFACES DE REDE
+
+
+Uma ótima ferramenta de rede é o Ethtool, com ela é possível verificar quais são as interfaces, mudar velocidade,
+alterar forma de negociação e é até mesmo verificar qual interface está localizada fisicamente.
+
+Mostrar a velocidade da placa de rede, assim como a velocidade suportada para a interface:
+# ethtool [interface]
+
+
+Mostrar as estatísticas de rx e tx para a interface:
+# ethtool -S [interface]
+
+
+Deixar a interface piscando para podermos descobrir qual é a interface fisicamente:
+# ethtool -p [interface] [tempo]
+
+
+Manipular a velocidade da interface, assim como as formas de negociação:
+# ethtool -s [interface] speed [velocidade] duplex [half | full]
