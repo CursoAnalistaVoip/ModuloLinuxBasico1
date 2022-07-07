@@ -1,0 +1,18 @@
+
+
+Nos sistemas operacionais Linux , o utilitário mii-tool verifica ou define o status da unidade MII (Interface Independente de Mídia)
+de uma interface de rede. 
+Muitos adaptadores Ethernet usam um MII para negociar automaticamente a velocidade do link e a configuração duplex.
+
+Opções
+-v, –verbose	Exibir informações de status MII mais detalhadas. Se usado duas vezes, também exiba o conteúdo bruto do registro MII.
+-V, –version	Programa de exibição versão informações.
+-R, –reset	Redefina o MII para sua configuração padrão.
+-r, –restart	Reinicie a negociação automática.
+-w, –watch	Assista a interface (s) e relate alterações no status do link. As interfaces MII são pesquisadas em intervalos de um segundo.
+-l, –log	Usado com -w , registra as alterações do status do link no log do sistema em vez de imprimir na saída padrão.
+
+Comando mii-tool <interface de rede>
+
+#mii-tool eno1
+eno1: negotiated 1000baseT-FD flow-control, link ok
