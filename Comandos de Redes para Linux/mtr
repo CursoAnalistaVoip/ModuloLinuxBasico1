@@ -1,0 +1,28 @@
+mtr
+
+o mtr combina as características de Ping e o software Traceroute em um único aplicativo útil para analisar a qualidade eo desempenho de tráfego de rede.
+
+Centos 
+yum install mtr ou dnf install mtr
+
+Debian 
+apt Instalar mtr
+
+*Comando:*
+
+mtr [endereco_IP_destino_ou-dominio]
+
+EX:
+
+mtr google.com
+
+
+Segue o significado de cada coluna no relatório visto:
+
+Loss% — mostra a perda, em percentual, dos pacotes, a cada ciclo
+Snt — exibe o número de pacotes enviados (sent)
+Last — latência do último (last) pacote enviado
+Avg — latência média (average) de todos os pacotes
+Best — mostra o tempo de viagem (Round Trip Time) mais curto da origem ao destino
+Wrst — mostra o pior tempo de viagem da origem ao destino (worst RTT)
+StDev — provê o desvio padrão (Standard Deviation) das latências para cada host
