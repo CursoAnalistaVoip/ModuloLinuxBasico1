@@ -1,0 +1,84 @@
+lsof
+
+
+ 
+Um arquivo aberto pode ser um arquivo de disco, diretório, biblioteca, pipes, dispositivos e  sockets de rede que tenham sido abertos por um processo qualquer.
+
+Por exemplo, podemos usar esse comando quando tentamos desmontar um disco e não conseguimos, pois algum arquivo, que desconhecemos, está em uso ainda. Como resolver o problema? Podemos listar os arquivos abertos e identificar os processos que os estão usando, e então, finalizá-los.
+
+Essa ferramenta está disponível nos sistemas Linux, FreeBSD, Solaris e Mac OS X, entre outros.
+
+Sintaxe:
+
+lsof [opções]
+
+
+Opções comuns:
+
+lsof <enter>
+Lista todos os arquivos abertos por todos os processos.
+
++D diretório
+ Procura todas as instâncias abertas do diretório listado e todos os arquivos e diretórios que ele contém
+
+-i
+Mostra uma lista de sockets de rede abertos
+
+-i :n
+Mostra as conexões abertas na porta n
+
+-i [tcp|udp]
+Mostra as conexões ativas usando TCP ou UDP
+
+-u usuário
+Mostra o que o usuário tem aberto
+
+-p PID
+Mostra os arquivos abertos pelo processo com PID especificado
+
+-t
+ Retorna apenas os identificadores do processos (somente PIDs)
+
+-c comando
+Mostra quais arquivos e conexões de rede um comando está usando
+
+
+Informações comumente retornadas pelo lsof são:
+
+COMMAND – Comando em execução
+
+PID – Identificador do processo
+
+USER – Usuário proprietário do processo
+
+FD – File Descriptor (Descritor de Arquivos). Os mais comuns são:
+  cwd – Diretório atual
+  txt – Arquivo de texto
+  mem – Arquivo mapeado na memória
+  mmap – dispositivo mapeado na memória
+  NUMBER – É o próprio descritor de arquivos. O caractere que vem logo após o número representa o modo no qual o arquivo está aberto, odendo ser:  r para leitura, w para gravação e u para leitura e gravação.
+
+TYPE – Tipo do arquivo. Os tipos mais comuns são:
+
+  REG – Arquivo regular
+  DIR – Diretório
+  FIFO – FIFO (First In First Out)
+  CHR – Arquivo especial de caracteres
+
+DEVICE – Números do dispositivo, separados por vírgula
+
+SIZE, SIZE/OFF, OFFSET – Tamanho do arquivo ou offset do arquivo em bytes
+
+NODE – Número de inode no sistema de arquivos ou tipo de protocolo IP
+
+NAME – Nome do ponto de montagem e sistema de arquivos no qual o arquivo reside, ou o nome de um dispositivo especial de blocos ou caracteres, ou ainda os endereços IP de um arquivo de rede; há outras opções mais avançadas.
+
+
+#lsof -i :22
+COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+sshd      800 root    3u  IPv4  14419      0t0  TCP *:ssh (LISTEN)
+sshd      800 root    4u  IPv6  14428      0t0  TCP *:ssh (LISTEN)
+sshd     1303 root    3u  IPv4  15577      0t0  TCP ip121.ip-142-44-216.net:ssh->200.106.193.225:29536 (ESTABLISHED)
+
+
+
