@@ -1,0 +1,43 @@
+A princípio, para listar todas as portas abertas em um sistema Linux, você pode usar o comando netstat ou o utilitário ss da maneira mostrada abaixo.
+
+netstat -tulpn
+
+ou
+
+ss -tulpn
+
+
+
+Em termos de software, especialmente no nível do sistema operacional, uma porta é uma construção lógica que identifica um processo/programa específico ou um tipo de serviço de rede. Assim, neste guia saiba como listar e monitorar as portas TCP e UDP em tempo real no Linux.
+
+Ainda mais, cada serviço de rede em execução em um sistema Linux usa um protocolo específico. O mais comum é o TCP (Transmission Control Protocol) e o UDP (User Datagram Protocol). Além disso, cada serviço usa um número de porta para comunicação com outros processos ou serviços.
+
+Como monitorar portas TCP e UDP em tempo real no Linux
+Listar todas as portas abertas no Linux
+A princípio, para listar todas as portas abertas em um sistema Linux, você pode usar o comando netstat ou o utilitário ss da maneira mostrada abaixo.
+
+Além disso, é crucial mencionar que o comando netstat foi preterido. Assim, o comando ss ganhou seu lugar na exibição de estatísticas de rede mais detalhadas.
+
+Terminal:
+netstat -tulpn
+
+ou
+
+Terminal
+ ss -tulpn
+
+
+
+Como monitorar portas TCP e UDP em tempo real no Linux:
+
+Na saída do comando acima, a coluna State mostra se uma porta está em um estado de escuta (LISTEN) ou não.
+
+
+
+-t – ativa a listagem de portas TCP.
+-u – permite a listagem de portas UDP.
+-l – imprime apenas soquetes de escuta.
+-n – mostra o número da porta.
+-p – mostra o nome do processo/programa.
+
+watch netstat -tulpn
