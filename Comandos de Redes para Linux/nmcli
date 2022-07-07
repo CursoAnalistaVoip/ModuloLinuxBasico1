@@ -1,0 +1,44 @@
+Instalação
+
+yum install NetworkManager
+
+
+Comando:
+
+EX:
+#nmcli
+
+eno1: conectado para Conexão cabeada 1
+        "Intel 82579V"
+        ethernet (e1000e), 7C:05:07:02:5D:85, hw, mtu 15>
+        padrão ip4
+        inet4 192.168.10.203/24
+        route4 192.168.10.0/24 metric 100
+        route4 default via 192.168.10.1 metric 100
+        inet6 fe80::d5f9:bf5b:34b0:6717/64
+        route6 fe80::/64 metric 1024
+
+wlp0s26u1u6u3: desconectado
+        "Realtek RTL8192CU"
+        wifi (rtl8192cu), FA:2B:BC:02:3B:47, hw, mtu 1500
+
+p2p-dev-wlp0s26u1u6u3: desconectado
+        "p2p-dev-wlp0s26u1u6u3"
+        wifi-p2p, hw
+
+lo: não gerenciável
+        "lo"
+        loopback (unknown), 00:00:00:00:00:00, sw, mtu 6>
+
+
+
+
+
+Podemos visualizar todas as interfaces de rede ativas no Linux com um dos seguintes comandos:
+#nmcli con show
+
+
+Para exibir todas as conexões do Linux (ativas e desativadas), executaremos o seguinte comando:
+#nmcli dev status
+
+
