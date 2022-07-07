@@ -18,5 +18,5 @@ Comando mii-tool <interface de rede>
 EX: 
 
 #mii-tool eno1
-eno1: negotiated 1000baseT-FD flow-control, link ok
+eno1: negotiated 1000baseT-FD flow-control, link ok.
 
